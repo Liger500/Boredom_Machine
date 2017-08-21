@@ -11,6 +11,9 @@ namespace Boredom_Machine
         static void Main(string[] args)
         {
             int c;
+            string yn = "no";
+            string genre;
+            string activity;
             Console.WriteLine("What would you like to do?");
             Console.WriteLine("1) Video Games");
             Console.WriteLine("2) Movies");
@@ -21,7 +24,22 @@ namespace Boredom_Machine
 
             if (c == 1)
             {
-                Console.WriteLine("");
+                Console.WriteLine("Do you have a genre in mind?");
+                yn = Console.ReadLine();
+                if (yn == "yes")
+                {
+                    Console.WriteLine("Please pick a genre:");
+                    Console.WriteLine("FPS");
+                    Console.WriteLine("TPS");
+                    Console.WriteLine("RTS");
+                    Console.WriteLine("TBS");
+                    genre = Console.ReadLine();
+                } else
+                {
+                    //Pick a random game
+                    activity = "Halo";
+                    Console.WriteLine("I've chosen "+activity+" for you.");
+                }
             }
             if (c == 2)
             {
